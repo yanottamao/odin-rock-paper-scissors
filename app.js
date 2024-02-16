@@ -11,3 +11,39 @@ function getPlayerChoice() {
   const restOfText = playerSelectionPrompt.substring(1).toLowerCase();
   return firstLetter + restOfText;
 }
+
+function playGame() {
+  const playerSelection = getPlayerChoice();
+  const computerSelection = getComputerChoice();
+  console.log(playerSelection);
+  console.log(computerSelection);
+
+  if (playerSelection == computerSelection)
+    console.log(
+      `It's DRAW - Player : ${playerSelection} - Computer : ${computerSelection}`
+    );
+  else if (playerSelection == "Rock" && computerSelection == "Paper")
+    console.log(
+      `Computer WINS - Player : ${playerSelection} - Computer : ${computerSelection}`
+    );
+  else if (playerSelection == "Rock" && computerSelection == "Scissors")
+    console.log(
+      `Player WINS - Player : ${playerSelection} - Computer : ${computerSelection}`
+    );
+  else if (playerSelection == "Paper" && computerSelection == "Rock")
+    console.log(
+      `Player WINS - Player : ${playerSelection} - Computer : ${computerSelection}`
+    );
+  else if (playerSelection == "Paper" && computerSelection == "Scissors")
+    console.log(
+      `Computer WINS - Player : ${playerSelection} - Computer : ${computerSelection}`
+    );
+  else if (playerSelection == "Scissors" && computerSelection == "Rock")
+    console.log(
+      `Computer WINS - Player : ${playerSelection} - Computer : ${computerSelection}`
+    );
+  else if (playerSelection == "Scissors" && computerSelection == "Paper")
+    console.log(
+      `Player WINS - Player : ${playerSelection} - Computer : ${computerSelection}`
+    );
+}
