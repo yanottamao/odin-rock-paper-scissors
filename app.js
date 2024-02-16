@@ -6,10 +6,19 @@ function getComputerChoice() {
 }
 
 function getPlayerChoice() {
-  const playerSelectionPrompt = prompt("Enter your choice: ");
+  const playerSelectionPrompt = prompt(
+    "Enter your choice: (Rock/Paper/Scissors)"
+  );
   const firstLetter = playerSelectionPrompt.charAt(0).toUpperCase();
   const restOfText = playerSelectionPrompt.substring(1).toLowerCase();
-  return firstLetter + restOfText;
+  const playerChoice = firstLetter + restOfText;
+  if (choicesArray.includes(playerChoice)) {
+    console.log(playerChoice);
+    return playerChoice;
+  } else {
+    alert(`Please enter "Rock or Paper or Scissors" to continue`);
+    return getPlayerChoice();
+  }
 }
 
 function playGame() {
